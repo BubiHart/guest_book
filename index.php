@@ -1,6 +1,5 @@
 <?php
   require_once 'db_connect.php';
-  require_once 'display_message.php';
   ?>
   <html>
     <head>
@@ -13,7 +12,7 @@
     </head>
 
     <body>
-      <table id="example" class="display" width="100%" cellspacing="0">
+      <table id="main_table" class="display" width="100%" cellspacing="0">
         <thead>
           <tr>
             <th>name</th>
@@ -23,19 +22,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-                <td><?php{$messages['name']}?></td>
-                <td><?php{$messages['email']}?></td>
-                <td><?php{$messages['date']}?></td>
-                <td><?php{$messages['text']}?></td>
-                </tr>
+            <tr>
+                  <td><?php{$messages['name']}?></td>
+                  <td><?php{$messages['email']}?></td>
+                  <td><?php{$messages['date']}?></td>
+                  <td><?php{$messages['text']}?></td>
+                  </tr>
         </tbody>
         </table>
     </body>
     <script>
- $(function(){
-   $("#example").dataTable();
- })
+    $(document).ready(function() {
+	$('#main_table').dataTable( {
+		"bProcessing": true,
+		"bServerSide": true,
+		"sAjaxSource": "jq_dt_connect.php"
+	} );
+} );
  </script>
   </html>
   <?
