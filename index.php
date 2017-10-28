@@ -1,5 +1,5 @@
 <?php
-  require_once 'db_connect.php';
+  require_once 'database_connect.php';
   ?>
   <html>
     <head>
@@ -14,38 +14,101 @@
         <script>
         $(document).ready(function()
         {
-      $(".modalbox").fancybox();
-      $('#main_table').dataTable
-      (
-       {
-        "bProcessing": true,
-        "bServerSide": true,
-        "sAjaxSource": "jq_dt_connect.php"
-       }
-      );
-      $("#show_form").on("click", function()
-      {
-        $("#form").css("display", "block");
+
+          $(".modalbox").fancybox();
+          $('#main_table').dataTable
+          (
+           {
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "jquery_datatables_server_connect.php"
+           }
+          );
+          $("#show_form").on("click", function()
+          {
+            $("#form").css("display", "block");
 
       }
      );
       }
      );
        </script>
+           <script type="text/javascript">
+             $(document).ready(function()
+             {
+               $("#submit").on("click", function()
+               {
+                 //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
+                   if($.trim($("#name").val()) === "")
+                   {
+                     alert('please enter field "name"');
+                     return false;
+                   }
+                   if($.trim($("#email").val()) === "")
+                   {
+                     alert('please enter field "e-mail"');
+                     return false;
+                   }
+                   if($.trim($("#text").val()) === "")
+                   {
+                     alert('please enter field "text"');
+                     return false;
+                   }
+
+                   //BLOCK "SUBMIT" BUTTON
+                   $("#submit").prop("disabled", true);
+
+                   // AJAX QUERY
+                   $.ajax({
+                     url: "add_message.php",
+                     method: 'post',
+                     data:
+                     {
+                            name: $("#name").val(),
+                            email: $("#email").val(),
+                            text: $("#text").val()
+                     }
+                   }).done(function(data)
+                   {
+                   //UNBLOCK "SUBMIT" BUTTON
+                     $("#submit").prop("disabled", false);
+                   });
+               }
+               )
+             }
+             );
+           </script>
     </head>
 
     <body>
-      <div id="form">
-        <span>name</span>
-          <input id='name' type='text' />
-        <span>e-mail:</span>
-          <input id='email' type='email' />
-        <span>text:</span>
-          <textarea rows='5' id='text' type='text'></textarea>
-        <span>&nbsp;</span>
-          <input id='submit-id' type='submit' value='Отправить' />
-      </div>
       <a href="#form" rel="nofollow" class="modalbox">add comment</a>
+      <div id="form">
+        <p>
+          <span class='title'>Name:</span>
+          <span class='field'>
+            <input id='name' type='text' />
+          </span>
+        </p>
+        <p>
+          <span class='title'>E-mail:</span>
+          <span class='field'>
+            <input id='email' type='email' />
+          </span>
+        </p>
+        <p>
+          <span class='title'>Text:</span>
+          <span class='field'>
+            <textarea rows='5' id='text' type='text'></textarea>
+          </span>
+        </p>
+        <p>
+          <span class='ttl'>&nbsp;</span>
+          <span class='fld'>
+            <input id='submit' type='submit' value="send message"/>
+          </span>
+        </p>
+      </div>
+
       <table id="main_table" class="display" width="100%" cellspacing="0">
         <thead>
           <tr>
