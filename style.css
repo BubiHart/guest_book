@@ -3,3 +3,13 @@
   text-align: center;
   width: 100%;
 }
+
+#form
+{
+  display: none;
+}
+
+a
+{
+  text-decoration: none;
+}
