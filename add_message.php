@@ -4,7 +4,11 @@
   try
   {
     //CHECKING IF POST DATA IS GIVEN
-
+    session_start();
+    if($_POST['captcha'] != $_SESSION['rand_code'])
+    {
+      return false;
+    }
     if(!empty($_POST))
     {
 
@@ -23,6 +27,7 @@
       else {
         $error[] = "email isn't valid";
       }
+
 
       //IF THERE IS NO ERRORS MAKING NEW ENTRY INTO DATABASE
 
