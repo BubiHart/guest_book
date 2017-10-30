@@ -70,6 +70,7 @@
                      }
                    }).done(function(data)
                    {
+                     $('#main_table').DataTable().ajax.reload();
                    //UNBLOCK "SUBMIT" BUTTON
                      $("#submit").prop("disabled", false);
                    });
@@ -113,9 +114,9 @@
         <thead>
           <tr>
             <th>name</th>
-            <th>email</th>
-            <th>date</th>
             <th>text</th>
+            <th>date</th>
+            <th>email</th>
           </tr>
         </thead>
         <tbody>
