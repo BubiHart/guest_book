@@ -49,6 +49,11 @@
                      alert('please enter field "e-mail"');
                      return false;
                    }
+                   if($.trim($("#captcha").val()) === "")
+                   {
+                     alert('please enter field "captcha"');
+                     return false;
+                   }
                    if($.trim($("#text").val()) === "")
                    {
                      alert('please enter field "text"');
@@ -66,6 +71,7 @@
                      {
                             name: $("#name").val(),
                             email: $("#email").val(),
+                            captcha: $("#captcha").val(),
                             text: $("#text").val()
                      }
                    }).done(function(data)
@@ -74,10 +80,12 @@
                    //UNBLOCK "SUBMIT" BUTTON
                       $("#submit").prop("disabled", false);
 
+                      /*
                       $.fancybox.close();
                       document.getElementById("name").value = "";
                       document.getElementById("email").value = "";
                       document.getElementById("text").value = "";
+                      */
 
                    }
                  );
@@ -109,6 +117,12 @@
             <textarea rows='5' id='text' type='text'></textarea>
           </span>
         </p>
+            <p>
+              <span class='field'>
+                <img src="captcha.php">
+                <input type="text" id="captcha" name="captcha">
+              </span>
+            </p>
         <p>
           <span class='title'>&nbsp;</span>
           <span class='field'>
@@ -135,6 +149,7 @@
                   </tr>
         </tbody>
         </table>
+
     </body>
 
   </html>
