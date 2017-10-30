@@ -70,9 +70,17 @@
                      }
                    }).done(function(data)
                    {
+                     $('#main_table').DataTable().ajax.reload();
                    //UNBLOCK "SUBMIT" BUTTON
-                     $("#submit").prop("disabled", false);
-                   });
+                      $("#submit").prop("disabled", false);
+
+                      $.fancybox.close();
+                      document.getElementById("name").value = "";
+                      document.getElementById("email").value = "";
+                      document.getElementById("text").value = "";
+
+                   }
+                 );
                }
                )
              }
@@ -102,8 +110,8 @@
           </span>
         </p>
         <p>
-          <span class='ttl'>&nbsp;</span>
-          <span class='fld'>
+          <span class='title'>&nbsp;</span>
+          <span class='field'>
             <input id='submit' type='submit' value="send message"/>
           </span>
         </p>
@@ -113,9 +121,9 @@
         <thead>
           <tr>
             <th>name</th>
-            <th>email</th>
-            <th>date</th>
             <th>text</th>
+            <th>date</th>
+            <th>email</th>
           </tr>
         </thead>
         <tbody>
