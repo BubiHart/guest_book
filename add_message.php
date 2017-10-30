@@ -38,11 +38,14 @@
                     NOW(),
                     1)";
         $usr = $pdo->prepare($query);
-        $usr->execute([
+        $usr->execute
+        (
+          [
           'name' => $_POST['name'],
           'email' => $_POST['email'],
           'text' => $_POST['text'],
-        ]);
+        ]
+        );
       }
     }
 
