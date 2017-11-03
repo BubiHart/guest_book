@@ -11,89 +11,10 @@
       <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-        <script>
-        $(document).ready(function()
-        {
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+      <script src="main.js"></script>
 
-          $(".modalbox").fancybox();
-          $('#main_table').dataTable
-          (
-           {
-            "bProcessing": true,
-            "bServerSide": true,
-            "sAjaxSource": "jquery_datatables_server_connect.php"
-           }
-          );
-          $("#show_form").on("click", function()
-          {
-            $("#form").css("display", "block");
-
-      }
-     );
-      }
-     );
-       </script>
-           <script type="text/javascript">
-             $(document).ready(function()
-             {
-               $("#submit").on("click", function()
-               {
-                 //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
-                   if($.trim($("#name").val()) === "")
-                   {
-                     alert('please enter field "name"');
-                     return false;
-                   }
-                   if($.trim($("#email").val()) === "")
-                   {
-                     alert('please enter field "e-mail"');
-                     return false;
-                   }
-                   if($.trim($("#captcha").val()) === "")
-                   {
-                     alert('please enter field "captcha"');
-                     return false;
-                   }
-                   if($.trim($("#text").val()) === "")
-                   {
-                     alert('please enter field "text"');
-                     return false;
-                   }
-
-                   //BLOCK "SUBMIT" BUTTON
-                   $("#submit").prop("disabled", true);
-
-                   // AJAX QUERY
-                   $.ajax({
-                     url: "add_message.php",
-                     method: 'post',
-                     data:
-                     {
-                            name: $("#name").val(),
-                            email: $("#email").val(),
-                            captcha: $("#captcha").val(),
-                            text: $("#text").val()
-                     }
-                   }).done(function(data)
-                   {
-                     $('#main_table').DataTable().ajax.reload();
-                   //UNBLOCK "SUBMIT" BUTTON
-                      $("#submit").prop("disabled", false);
-
-                      /*
-                      $.fancybox.close();
-                      document.getElementById("name").value = "";
-                      document.getElementById("email").value = "";
-                      document.getElementById("text").value = "";
-                      */
-
-                   }
-                 );
-               }
-               )
-             }
-             );
-           </script>
     </head>
 
     <body>
@@ -102,25 +23,25 @@
         <p>
           <span class='title'>Name:</span>
           <span class='field'>
-            <input id='name' type='text' />
+            <input id='name' type='text' required/>
           </span>
         </p>
         <p>
           <span class='title'>E-mail:</span>
           <span class='field'>
-            <input id='email' type='email' />
+            <input id='email' type='email' required/>
           </span>
         </p>
         <p>
           <span class='title'>Text:</span>
           <span class='field'>
-            <textarea rows='5' id='text' type='text'></textarea>
+            <textarea rows='5' id='text' type='text' required></textarea>
           </span>
         </p>
             <p>
               <span class='field'>
                 <img src="captcha.php">
-                <input type="text" id="captcha" name="captcha">
+                <input type="text" id="captcha" name="captcha" required/>
               </span>
             </p>
         <p>
