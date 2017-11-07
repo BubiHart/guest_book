@@ -7,6 +7,9 @@
     session_start();
     if($_POST['captcha'] != $_SESSION['rand_code'])
     {
+      echo "<div>".
+           "<span>captcha incorrect</span>".
+           "</div>";
       return false;
     }
     if(!empty($_POST))

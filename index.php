@@ -20,6 +20,11 @@
     <body>
       <a href="#form" rel="nofollow" class="modalbox">add comment</a>
       <div id="form">
+        <div id="info">
+          <?php
+          require_once 'add_message.php';
+          ?>
+        </div>
         <p>
           <span class='title'>Name:</span>
           <span class='field'>
