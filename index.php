@@ -1,6 +1,6 @@
 <?php
   require_once 'database_connect.php';
-  ?>
+?>
   <html>
     <head>
       <meta charset="utf-8">
@@ -20,6 +20,11 @@
     <body>
       <a href="#form" rel="nofollow" class="modalbox">add comment</a>
       <div id="form">
+        <div class="info">
+          <?php
+          require_once 'add_message.php';
+          ?>
+        </div>
         <p>
           <span class='title'>Name:</span>
           <span class='field'>
@@ -52,13 +57,13 @@
         </p>
       </div>
 
-      <table id="main_table" class="display" width="100%" cellspacing="0">
+      <table id="main_table" class="display" width="100%" data-order='[[ 2, "desc" ]]'data-page-length='25' cellspacing="0">
         <thead>
           <tr>
             <th>name</th>
-            <th>text</th>
-            <th>date</th>
             <th>email</th>
+            <th>date</th>
+            <th>text</th>
           </tr>
         </thead>
         <tbody>

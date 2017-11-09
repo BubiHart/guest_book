@@ -18,9 +18,11 @@ $(document).ready(function()
  );
     $("#submit").on("click", function()
     {
-      /*
-      //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
-        if($.trim($("#name").val()) === "")
+        $(".info").removeClass("info");
+        $(this).addClass("info_show");
+
+        //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
+        /*if($.trim($("#name").val()) === "")
         {
           alert('please enter field "name"');
           return false;
@@ -40,8 +42,8 @@ $(document).ready(function()
           alert('please enter field "text"');
           return false;
         }
-        */
 
+*/
         //BLOCK "SUBMIT" BUTTON
         $("#submit").prop("disabled", true);
 
@@ -58,18 +60,21 @@ $(document).ready(function()
           }
         }).done(function(data)
         {
+          $("#info").html(data);
           $('#main_table').DataTable().ajax.reload();
         //UNBLOCK "SUBMIT" BUTTON
            $("#submit").prop("disabled", false);
-
-
+           /*
            $.fancybox.close();
            document.getElementById("name").value = "";
            document.getElementById("email").value = "";
            document.getElementById("text").value = "";
+           */
+
 
         }
       );
+
     }
     )
   }
