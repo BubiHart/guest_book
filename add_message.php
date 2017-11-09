@@ -1,4 +1,5 @@
 <?php
+  error_reporting(0);
   // MAKING CONNECTION WITH DATABASE
   require_once("database_connect.php");
   try
@@ -36,15 +37,7 @@
 
       if(empty($error))
       {
-        $query = "INSERT INTO
-                    messages
-                  VALUES (
-                    NULL,
-                    :name,
-                    :email,
-                    :text,
-                    NOW(),
-                    1)";
+        $query = "INSERT INTO messages VALUES ( NULL, :name, :text, :email, NOW(), 1)";
         $usr = $pdo->prepare($query);
         $usr->execute
         (

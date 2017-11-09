@@ -1,7 +1,13 @@
-#safsafsaasfinfo
+.info
 {
   display: none;
 }
+
+.info_show
+{
+  display: inline-block;
+}
+
 .test
 {
   text-align: center;
