@@ -22,7 +22,7 @@ $(document).ready(function()
         $(this).addClass("info_show");
 
         //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
-        /*if($.trim($("#name").val()) === "")
+        if($.trim($("#name").val()) === "")
         {
           alert('please enter field "name"');
           return false;
@@ -43,7 +43,6 @@ $(document).ready(function()
           return false;
         }
 
-*/
         //BLOCK "SUBMIT" BUTTON
         $("#submit").prop("disabled", true);
 
@@ -76,6 +75,6 @@ $(document).ready(function()
       );
 
     }
-    )
+  );
   }
   );

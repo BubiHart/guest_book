@@ -21,8 +21,8 @@
 	$sTable = "messages";
 
 	/* Database connection information */
-	$gaSql['user']       = "root";
-	$gaSql['password']   = "";
+	$gaSql['user']       = "user";
+	$gaSql['password']   = "LK9HZNw3mX8dQPmZ";
 	$gaSql['db']         = "test";
 	$gaSql['server']     = "localhost";
 

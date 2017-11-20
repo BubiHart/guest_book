@@ -1,9 +1,14 @@
-<?php ## Соединение с базой данных
+<?php
   try
   {
-    $pdo = new PDO(
-    'mysql:host=localhost;dbname=test', 'root', '',
-    [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $pdo = new PDO
+	(
+		'mysql:host=localhost;
+		dbname=test', 
+		'user', 
+		'LK9HZNw3mX8dQPmZ',
+		[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+	);
   }
   catch (PDOException $e)
   {

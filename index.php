@@ -18,7 +18,36 @@
     </head>
 
     <body>
-      <a href="#form" rel="nofollow" class="modalbox">add comment</a>
+      <div class="wrapper">
+        <header>
+          <h1 class="header-title">Guest book</h1>
+        </header>
+        <main>
+          <div class="main_header">
+              <a href="#form" rel="nofollow" class="modalbox">add comment</a>
+          </div>
+          <table id="main_table" class="data_table" data-order='[[ 2, "desc" ]]'data-page-length='25' cellspacing="0">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>date</th>
+                <th>text</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                      <td><?php{$messages['name']}?></td>
+                      <td><?php{$messages['email']}?></td>
+                      <td><?php{$messages['date']}?></td>
+                      <td><?php{$messages['text']}?></td>
+                      </tr>
+            </tbody>
+            </table>
+        </main>
+      </div>
+
+
       <div id="form">
         <div class="info">
           <?php
@@ -57,24 +86,7 @@
         </p>
       </div>
 
-      <table id="main_table" class="display" width="100%" data-order='[[ 2, "desc" ]]'data-page-length='25' cellspacing="0">
-        <thead>
-          <tr>
-            <th>name</th>
-            <th>email</th>
-            <th>date</th>
-            <th>text</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-                  <td><?php{$messages['name']}?></td>
-                  <td><?php{$messages['email']}?></td>
-                  <td><?php{$messages['date']}?></td>
-                  <td><?php{$messages['text']}?></td>
-                  </tr>
-        </tbody>
-        </table>
+
 
     </body>
 
