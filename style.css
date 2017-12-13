@@ -1,14 +1,140 @@
+/********GENERAL STYLES***************/
+
 
 body
 {
   display: flex;
-
+  background-image: url("img/body.png");
+  flex-direction: column;
 }
+
 .wrapper
 {
+  width: 1290px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+/*.wrapper-top
+{
+  display: flex;
+}
+*/
+
+/***********HEADER STYLES*****************/
+header
+{
+  display: flex;
+  border-bottom: 1px solid #000;
+}
+
+header .modalbox
+{
+  margin: auto 30px auto auto;
+  color: #000;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: grey;
+}
+
+.header-title
+{
+  margin-left: 20px;
+}
+
+/***********MENU STYLES********************/
+
+menu
+{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  width: 100%;
+  margin-top: 0;
+}
+
+menu .menu_main-navigation
+{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: auto;
+}
+
+.menu_main-navigation li
+{
+  margin: auto;
+  list-style: none;
+  margin-right: 45px;
+  padding: auto;
+  text-transform: uppercase;
+}
+
+.menu_main-navigation li a
+{
+  color: #000;
+}
+
+.menu_main-navigation li a:hover
+{
+  color: green;
+}
+/*---------------MAIN STYLES-----------------*/
+
+main
+{
+  padding: 20px;
   width: 1250px;
   margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 25px;
+  background-color: #fff;
+}
 
+/*---------------------DATA TABLE STYLES---------*/
+/*
+.data_table
+{
+  width: 3000px;
+}
+
+.data_table td
+{
+  text-align: left;
+}
+
+.data_table th
+{
+  text-align: left;
+}
+
+.data_table-name
+{
+  min-width: 20px;
+  width: auto;
+}
+
+.data_table-email
+{
+  min-width: 20px;
+  width: auto;
+}
+
+.data_table-date
+{
+  width: 20px;
+}
+
+*/
+
+
+#main_table
+{
+  word-wrap: break-word;
 }
 .info
 {
@@ -31,39 +157,48 @@ a
   text-decoration: none;
 }
 
-#form {
+#form
+{
   height: auto;
   display: none;
 }
-#form p {
+#form p
+{
   display: relative;
   clear: both;
 }
-p .title {
+p .title
+{
   width: 100px;
   float: left;
   text-align: right;
 }
-p .title {
+p .title
+{
   font-family: Verdana, sans-serif;
   font-size: 13px;
 }
-.field {
+.field
+{
   float: left;
   margin-bottom: 3px;
   padding-left: 10px;
 }
-#nickname, #content {
+#nickname, #content
+{
   width: 400px;
 }
 
-.author, .date, .email {
+.author, .date, .email
+{
   font-weight: bold;
 }
-.date {
+.date
+{
   padding-left: 10px;
 }
-.content {
+.content
+{
   display: block;
   padding-bottom: 10px;
 }

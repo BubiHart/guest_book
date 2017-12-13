@@ -4,7 +4,7 @@
     $pdo = new PDO
 	(
 		'mysql:host=localhost;
-		dbname=test', 
+		dbname=test',
 		'user', 
 		'LK9HZNw3mX8dQPmZ',
 		[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
