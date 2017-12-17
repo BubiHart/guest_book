@@ -37,7 +37,7 @@ header .modalbox
   width: auto;
   padding: 10px;
   border-radius: 15px;
-  background-color: grey;
+  background-color: #ecf0df;
 }
 
 .header-title
@@ -96,6 +96,26 @@ main
 }
 
 /*---------------------DATA TABLE STYLES---------*/
+
+.data_table
+{
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  /*border-left: 1px solid #000; */
+}
+
+.data_table th
+{
+  background-color: #9bbb58;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+.data_table tr:nth-child(2n + 1)
+{
+   background-color: #ecf0df;
+}
 /*
 .data_table
 {
@@ -107,10 +127,7 @@ main
   text-align: left;
 }
 
-.data_table th
-{
-  text-align: left;
-}
+
 
 .data_table-name
 {

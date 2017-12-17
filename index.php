@@ -56,7 +56,7 @@
           </div>
         <main>
 
-          <table id="main_table" class="data_table hover"  data-order='[[ 2, "desc" ]]' data-page-length='25' cellspacing="0" border="1px">
+          <table id="main_table" class="data_table hover"  data-order='[[ 2, "desc" ]]' data-page-length='25' cellspacing="0">
             <thead>
               <tr>
                 <th class="data_table-name">
@@ -68,10 +68,10 @@
                 <th class="data_table-date">
                   date
                 </th>
-                <!--<th class="data_table-text">
+                <th class="data_table-text">
                   text
                 </th>
-              -->
+
               </tr>
             </thead>
             <tbody>
