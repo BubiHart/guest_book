@@ -101,6 +101,8 @@ main
 {
   border-left: 1px solid #000;
   border-right: 1px solid #000;
+  width: 1255px;
+  table-layout: fixed;
   /*border-left: 1px solid #000; */
 }
 
@@ -116,106 +118,108 @@ main
 {
    background-color: #ecf0df;
 }
-/*
-.data_table
-{
-  width: 3000px;
-}
 
 .data_table td
 {
   text-align: left;
+  word-wrap: break-word;
 }
 
-
-
-.data_table-name
-{
-  min-width: 20px;
-  width: auto;
-}
 
 .data_table-email
 {
   min-width: 20px;
-  width: auto;
+  max-width: 40px;
 }
 
 .data_table-date
 {
   width: 20px;
+  max-width: 20px;
 }
 
-*/
-
-
-#main_table
+.data_table-email
 {
-  word-wrap: break-word;
-}
-.info
-{
-  display: none;
+  min-width: 30px;
+  max-width: 50px;
 }
 
-.info_show
+
+.data_table-name
 {
-  display: inline-block;
+  min-width: 75px;
+  max-width: 80px;
 }
 
-.test
-{
-  text-align: center;
-  width: 100%;
-}
+
 
 a
 {
   text-decoration: none;
 }
+/***********FORM STYLES********************/
 
-#form
+span
+{
+  font-size: 12px;
+}
+
+
+.form
+{
+  display: none;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.form_basis
 {
   height: auto;
-  display: none;
-}
-#form p
-{
-  display: relative;
-  clear: both;
-}
-p .title
-{
-  width: 100px;
-  float: left;
-  text-align: right;
-}
-p .title
-{
-  font-family: Verdana, sans-serif;
-  font-size: 13px;
-}
-.field
-{
-  float: left;
-  margin-bottom: 3px;
-  padding-left: 10px;
-}
-#nickname, #content
-{
-  width: 400px;
+  width: auto;
+  margin: 15px auto;
 }
 
-.author, .date, .email
+.top
 {
-  font-weight: bold;
+  vertical-align: top;
 }
-.date
+
+.captcha_img
 {
-  padding-left: 10px;
+  width: 183px;
+  margin-left: 20px;
+  margin-right: auto;
 }
-.content
+.form_basis table
 {
-  display: block;
-  padding-bottom: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.form_basis-table_row-name-cell
+{
+  text-align: center;
+}
+
+#submit
+{
+  margin-top: 25px;
+  width: auto;
+  height: auto;
+}
+.form_basis-table_row-input-cell
+{
+  text-align: center;
+}
+
+.form_basis-table_row-input-cell input
+{
+  width: 183px;
+  height: 25px;
+}
+
+.form_basis-table_row-input-cell textarea
+{
+  width: 183px;
 }

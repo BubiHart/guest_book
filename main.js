@@ -18,9 +18,6 @@ $(document).ready(function()
  );
     $("#submit").on("click", function()
     {
-        $(".info").removeClass("info");
-        $(this).addClass("info_show");
-
         //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
         if($.trim($("#name").val()) === "")
         {
@@ -59,16 +56,26 @@ $(document).ready(function()
           }
         }).done(function(data)
         {
-          $("#info").html(data);
-          $('#main_table').DataTable().ajax.reload();
-        //UNBLOCK "SUBMIT" BUTTON
+
+           $('#main_table').DataTable().ajax.reload();
+
+          //UNBLOCK "SUBMIT" BUTTON
+
            $("#submit").prop("disabled", false);
-           /*
-           $.fancybox.close();
-           document.getElementById("name").value = "";
-           document.getElementById("email").value = "";
-           document.getElementById("text").value = "";
-           */
+
+          //PROCESSING RESPONSE FROM PHP FILE
+           if(data == 0)
+           {
+             alert('captcha incorrect');
+           }
+           if(data == 1)
+           {
+             $.fancybox.close();
+             document.getElementById("name").value = "";
+             document.getElementById("email").value = "";
+             document.getElementById("text").value = "";
+             document.getElementById("captcha").value = "";
+           }
 
 
         }

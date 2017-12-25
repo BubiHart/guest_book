@@ -1,5 +1,4 @@
 <?php
-  error_reporting(0);
   // MAKING CONNECTION WITH DATABASE
   require_once("database_connect.php");
   try
@@ -8,10 +7,12 @@
     session_start();
     if($_POST['captcha'] != $_SESSION['rand_code'])
     {
-      echo "<div>".
-           "<span>captcha incorrect</span>".
-           "</div>";
+      echo 0;
       return false;
+    }
+    if($_POST['captcha'] == $_SESSION['rand_code'])
+    {
+      echo 1;
     }
     if(!empty($_POST))
     {
