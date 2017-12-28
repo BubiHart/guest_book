@@ -25,7 +25,7 @@
         <!---------------------------------HEADER-------------------------------------------->
           <header>
               <h1 class="header-title">
-                Guest book
+                SITE TITLE
               </h1>
               <a href="#form" rel="nofollow" class="modalbox">add comment</a>
           </header>
@@ -33,22 +33,22 @@
           <menu>
             <ul class="menu_main-navigation">
               <li>
-                <a href="#">
+                <a href="#" id="home_link">
                   Home
                 </a>
               </li>
               <li>
-                <a href="index.php">
+                <a href="#" id="blog_link">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" class="guest_book">
+                <a href="#" class="guest_book" id="guest_book_link">
                   Guest Book
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" id="contact_link">
                   Contact us
                 </a>
               </li>
@@ -57,47 +57,19 @@
           </div>
         <main>
 <!------------------------------------------ DATA TABLE------------------------------------------------------------------>
-          <table id="main_table" class="data_table hover"  data-order='[[ 2, "desc" ]]' data-page-length='25' cellspacing="0">
-            <thead>
-              <tr>
-                <th class="data_table-name">
-                  name
-                </th>
-                <th class="data_table-email">
-                  email
-                </th>
-                <th class="data_table-date">
-                  date
-                </th>
-                <th class="data_table-text">
-                  text
-                </th>
 
-              </tr>
-            </thead>
-            <tbody>
+  <div id="table">
 
-                <tr>
-                  <a href="#">
-                  <td class="data_table-name">
-                    <?php{$messages['name']}?>
-                  </td>
-                  <td class="data_table-email">
-                    <?php{$messages['email']}?>
-                  </td>
-                  <td class="data_table-date">
-                    <?php{$messages['date']}?>
-                  </td>
+  </div>
 
-                  <td class="data_table-text">
-                    <?php{$messages['text']}?>
-                  </td>
+  <div id="blog">
 
-                </a>
-                </tr>
+  </div>
 
-            </tbody>
-            </table>
+  <div id="contact">
+
+  </div>
+
         </main>
 <!--------------------------------FORM----------------------------------->
 

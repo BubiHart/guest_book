@@ -7,15 +7,104 @@ $(document).ready(function()
      {
       "bProcessing": true,
       "bServerSide": true,
+      "bRetrieve": true,
       "sAjaxSource": "jquery_datatables_server_connect.php"
      }
     );
-    $("#show_form").on("click", function()
-    {
-      $("#form").css("display", "block");
 
-}
- );
+    $('#home_link').click(function()
+    {
+      $("#home_link").prop("disabled", true);
+    $.ajax
+    ({
+     url: "index.php",
+     method: 'post',
+     cache: false,
+     success: function(html)
+     {
+       $(body).html(html);
+       $("#submit").prop("disabled", false);
+     }
+    });
+    if(pending)
+    {
+        return;
+     }
+    return false;
+
+
+    });
+
+    $('#guest_book_link').click(function()
+    {
+      $("#guest_book_link").prop("disabled", true);
+    $.ajax
+    ({
+     url: "guest_book.php",
+     method: 'post',
+     cache: false,
+     success: function(html)
+     {
+       $("#table").html(html);
+       $("#guest_book_link").prop("disabled", false);
+     }
+    });
+    if(pending)
+    {
+        return;
+     }
+    return false;
+
+
+    });
+
+    $('#blog_link').click(function()
+    {
+      $("#blog_link").prop("disabled", true);
+    $.ajax
+    ({
+     url: "blog.php",
+     method: 'post',
+     cache: false,
+     success: function(html)
+     {
+       $("#blog").html(html);
+       $("#blog_link").prop("disabled", false);
+     }
+    });
+    if(pending)
+    {
+        return;
+     }
+    return false;
+
+
+    });
+
+    $('#contact_link').click(function()
+    {
+    event.preventDefault();
+      $("#contact_link").prop("disabled", true);
+    $.ajax
+    ({
+     url: "contact.php",
+     method: 'post',
+     cache: false,
+     success: function(html)
+     {
+       $("#contact").html(html);
+       $("#contact_link").prop("disabled", false);
+     }
+    });
+    if(pending)
+    {
+        return;
+     }
+    return false;
+
+
+    });
+
     $("#submit").on("click", function()
     {
         //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM

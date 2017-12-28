@@ -16,11 +16,16 @@ body
   border-radius: 25px;
 }
 
-/*.wrapper-top
+.main_blog
 {
-  display: flex;
+  margin: auto;
 }
-*/
+
+.main_contact
+{
+  margin: auto;
+}
+
 
 /***********HEADER STYLES*****************/
 header
