@@ -12,6 +12,7 @@
     <script src="main.js"></script>
   </head>
   <body>
+    <div id="load_table">
 
     <table id="main_table" class="data_table hover"  data-order='[[ 2, "desc" ]]' data-page-length='25' cellspacing="0">
       <thead>
@@ -54,6 +55,6 @@
 
       </tbody>
       </table>
-
+      </div>
   </body>
 </html>
