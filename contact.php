@@ -5,7 +5,7 @@
   </head>
   <body>
     <div class="main_contact">
-        BLOG
+        CONTACT
     </div>
   </body>
 </html>

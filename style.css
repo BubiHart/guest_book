@@ -1,6 +1,5 @@
 /********GENERAL STYLES***************/
 
-
 body
 {
   display: flex;
@@ -34,7 +33,7 @@ header
   border-bottom: 1px solid #000;
 }
 
-header .modalbox
+.modalbox
 {
   margin: auto 30px auto auto;
   color: #000;
@@ -101,6 +100,15 @@ main
 }
 
 /*---------------------DATA TABLE STYLES---------*/
+
+#main_table_wrapper
+{
+  margin-top: 20px;
+}
+.content
+{
+  display: flex;
+}
 
 .data_table
 {
