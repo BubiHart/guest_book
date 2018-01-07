@@ -4,7 +4,7 @@ $(document).ready(function()
         $('#guest_book_link').click(function()
         {
 
-          $("#content").load("guest_book.php #load_table", function()
+          $("#content").load("pages/guest_book.php #load_table", function()
           {
             $(".modalbox").fancybox();
             $('#main_table').dataTable
@@ -12,7 +12,7 @@ $(document).ready(function()
               "bProcessing": true,
               "bServerSide": true,
               "bRetrieve": true,
-              "sAjaxSource": "jquery_datatables_server_connect.php"
+              "sAjaxSource": "PHP/jquery_datatables_server_connect.php"
             });
             $("#submit").on("click", function()
             {
@@ -44,7 +44,7 @@ $(document).ready(function()
               // AJAX QUERY
               $.ajax
               ({
-                url: "add_message.php",
+                url: "PHP/add_message.php",
                 method: 'post',
                 data: {
                   name: $("#name").val(),
@@ -66,6 +66,11 @@ $(document).ready(function()
                 {
                   alert('captcha incorrect');
                 }
+
+                if(data == 12)
+                {
+                  alert('Email incorrect');
+                }
                 if (data == 1)
                 {
                   $.fancybox.close();
@@ -83,7 +88,7 @@ $(document).ready(function()
         {
           $.ajax
           ({
-            url: "home.php",
+            url: "pages/home.php",
             method: 'post',
             cache: false,
             success: function(html)
@@ -98,7 +103,7 @@ $(document).ready(function()
         {
           $.ajax
           ({
-            url: "blog.php",
+            url: "pages/blog.php",
             method: 'post',
             cache: false,
             success: function(html)
@@ -113,10 +118,11 @@ $(document).ready(function()
         {
           $.ajax
           ({
-            url: "contact.php",
+            url: "pages/contact.php",
             method: 'post',
             cache: false,
-            success: function(html) {
+            success: function(html)
+            {
               $("#content").html(html);
             }
           });

@@ -1,14 +1,14 @@
 <?php
-  require_once 'database_connect.php';
-  require_once 'display_message.php';
+  require_once '../PHP/database_connect.php';
+  require_once '../PHP/display_message.php';
 ?>
 <html>
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="jquery_datatable\jquery_datatable.css">
+    <script src="libs/jquery_datatable/jquery_datatable_js.js"></script>
+    <link rel="stylesheet" href="libs/normalize_css/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="libs/jquery_datatable/jquery_datatable_css.css">
 
   </head>
   <body>
@@ -50,7 +50,7 @@
                     <span>Captcha:</span>
                   </td>
                   <td class="form_basis-table_row-input-cell" align="center">
-                    <img src="captcha.php" class="captcha_img">
+                    <img src="PHP/captcha.php" class="captcha_img">
                   </td>
                 </tr>
 

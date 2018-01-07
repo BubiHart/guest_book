@@ -3,10 +3,10 @@
 	$string = "";
 	for ($i = 0; $i < 5; $i++)
 		$string .= chr(rand(97, 122));
-	
+
 	$_SESSION['rand_code'] = $string;
 
-	$dir = "fonts/";
+	$dir = "../fonts/";
 
 	$image = imagecreatetruecolor(170, 60);
 	$black = imagecolorallocate($image, 0, 0, 0);

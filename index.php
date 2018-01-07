@@ -1,23 +1,22 @@
 <?php
-  require_once 'database_connect.php';
-  require_once 'display_message.php';
+  require_once 'PHP/database_connect.php';
+  require_once 'PHP/display_message.php';
 ?>
   <html>
     <head>
 
       <meta charset="utf-8">
-      <title>Guest Book</title>
-      <script type="text/javascript" src="jquery.js" ></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
-      <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-      <script src="main.js"></script>
-      <link rel="stylesheet" href="normalize.css">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" type="text/css" href="jquery_datatable\jquery_datatable.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
-
+      <title>Site title</title>
+      <link rel="stylesheet" href="libs/normalize_css/normalize.css">
+      <link rel="stylesheet" href="CSS/style.css">
+      <link rel="stylesheet" href="libs/jquery_datatable/jquery_datatable_css.css">
+      <link rel="stylesheet" href="libs/fancybox/fancybox_css.css">
+      <script src="libs/jquery/jquery.js"></script>
+      <script src="libs/fancybox/fancybox_js.js"></script>
+      <script src="libs/jquery_validation/jquery_validate_js.js"></script>
+      <script src="libs/jquery_validation/jquery_validate_additional-methods_js.js"></script>
+      <script src="libs/jquery_datatable/jquery_datable_js.js"></script>
+      <script src="JS/main.js"></script>
     </head>
 
     <body>
