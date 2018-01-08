@@ -65,7 +65,7 @@ table.dataTable tbody tr.selected {
 }
 table.dataTable tbody th,
 table.dataTable tbody td {
-  padding: 8px 10px;
+  padding: 2px 10px;
 }
 table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
   border-top: 1px solid #ddd;
@@ -94,11 +94,11 @@ table.dataTable.stripe tbody tr.odd.selected, table.dataTable.display tbody tr.o
   background-color: #acbad4;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
-  background-color: #f6f6f6;
-  cursor: pointer;
+  /*background-color: #f6f6f6;*/
+  background-color: #C5FDB5;
 }
 table.dataTable.hover tbody tr:hover.selected, table.dataTable.display tbody tr:hover.selected {
-  background-color: #aab7d1;
+  background-color: #B5FDB5;
 }
 table.dataTable.order-column tbody tr > .sorting_1,
 table.dataTable.order-column tbody tr > .sorting_2,
@@ -184,7 +184,7 @@ table.dataTable.compact tfoot td {
 }
 table.dataTable.compact tbody th,
 table.dataTable.compact tbody td {
-  padding: 4px;
+  padding: 2px;
 }
 table.dataTable th.dt-left,
 table.dataTable td.dt-left {

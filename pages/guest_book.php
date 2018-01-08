@@ -75,7 +75,11 @@
             </div>
           </div>
 
-    <a href="#form" rel="nofollow" class="modalbox">add comment</a>
+    <a href="#form" rel="nofollow" class="modalbox">
+    <span>
+      add comment
+    </span>
+    </a>
     <table id="main_table" class="data_table hover"  data-order='[[ 2, "desc" ]]' data-page-length='25' cellspacing="0">
       <thead>
         <tr>
@@ -99,17 +103,17 @@
           <tr>
             <a href="#">
             <td class="data_table-name">
-              <?php{$messages['name']}?>
+              <?php{htmlspecialchars($messages['name'])}?>
             </td>
             <td class="data_table-email">
-              <?php{$messages['email']}?>
+              <?php{htmlspecialchars($messages['email'])}?>
             </td>
             <td class="data_table-date">
-              <?php{$messages['date']}?>
+              <?php{htmlspecialchars($messages['date'])}?>
             </td>
 
             <td class="data_table-text">
-              <?php{$messages['text']}?>
+              <?php{htmlspecialchars($messages['text'])}?>
             </td>
 
           </a>

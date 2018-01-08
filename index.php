@@ -17,20 +17,21 @@
       <script src="libs/jquery_validation/jquery_validate_additional-methods_js.js"></script>
       <script src="libs/jquery_datatable/jquery_datable_js.js"></script>
       <script src="JS/main.js"></script>
+
     </head>
 
     <body>
-        <div class="wrapper-top wrapper">
-        <!---------------------------------HEADER-------------------------------------------->
-          <header>
-              <h1 class="header-title">
-                SITE TITLE
-              </h1>
 
-          </header>
-<!---------------------------------MENU-------------------------------------------->
-          <menu>
-            <ul class="menu_main-navigation">
+      <header>
+        <header class="header-wrapper">
+          <div class="header-wrapper-logo">
+            <span>
+              LOGO
+            </span>
+          </div>
+          <nav>
+            <ul class="header-wrapper_main-navigation">
+              
               <li>
                 <a href="#" id="home_link">
                   Home
@@ -52,22 +53,86 @@
                 </a>
               </li>
             </ul>
-          </menu>
-          </div>
-        <main>
-<!------------------------------------------ DATA TABLE------------------------------------------------------------------>
+          </nav>
+        </header>
+      </header>
 
- <div id="content" class="content">
-   HOME
- </div>
+      <main>
+          <main class="main-wrapper">
+            <div id="content" class="main-wrapper-content">
+              HOME
+            </div>
+          </main>
+      </main>
 
-        </main>
-<!--------------------------------FORM----------------------------------->
-
-
+      <footer>
+        <footer class="footer-wrapper">
+          <span>
+            footer
+          </span>
+        </footer>
+      </footer>
 
     </body>
 
-  </html>
-  <?
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--
+      <div class="wrapper-top wrapper">
+
+        <header>
+          <h1 class="header-title">
+            SITE TITLE
+          </h1>
+        </header>
+
+        <menu>
+          <ul class="menu_main-navigation">
+            <li>
+              <a href="#" id="home_link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" id="blog_link">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="#" class="guest_book" id="guest_book_link">
+                Guest Book
+              </a>
+            </li>
+            <li>
+              <a href="#" id="contact_link">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </menu>
+      </div>
+      <main>
+        <div id="content" class="content">
+          HOME
+        </div>
+     </main>
+  </body>
+</html>
+-->
