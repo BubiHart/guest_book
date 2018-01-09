@@ -11,7 +11,7 @@
 	$image = imagecreatetruecolor(170, 60);
 	$black = imagecolorallocate($image, 0, 0, 0);
 	$color = imagecolorallocate($image, 200, 100, 90);
-	$white = imagecolorallocate($image, 255, 255, 255);
+	$white = imagecolorallocate($image, 180,254,182);
 
 	imagefilledrectangle($image,0,0,399,99,$white);
 	imagettftext ($image, 30, 0, 10, 40, $color, $dir."verdana.ttf", $_SESSION['rand_code']);

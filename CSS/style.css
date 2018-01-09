@@ -220,6 +220,16 @@ footer
   min-height: 300px;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+textarea[type="text"]
+{
+  border: 1px solid #008500;
+  background-color: #C5FDB5;
+}
+
+
 .form_basis
 {
   height: auto;
