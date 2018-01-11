@@ -14,6 +14,10 @@ $(document).ready(function()
               "bRetrieve": true,
               "sAjaxSource": "PHP/jquery_datatables_server_connect.php"
             });
+            $("#captcha_img").on("click", function()
+            {
+              $('#captcha_img').attr('src', 'PHP/captcha.php?' + $.now());
+            });
             $("#submit").on("click", function()
             {
               //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
@@ -46,6 +50,7 @@ $(document).ready(function()
               ({
                 url: "PHP/add_message.php",
                 method: 'post',
+                cache: false,
                 data: {
                   name: $("#name").val(),
                   email: $("#email").val(),
@@ -54,7 +59,6 @@ $(document).ready(function()
                 }
               }).done(function(data)
               {
-
                 $('#main_table').DataTable().ajax.reload();
 
                 //UNBLOCK "SUBMIT" BUTTON
@@ -65,6 +69,7 @@ $(document).ready(function()
                 if (data == 0)
                 {
                   alert('captcha incorrect');
+                  $('#captcha_img').attr('src', 'PHP/captcha.php?' + $.now());
                 }
 
                 if(data == 12)
@@ -78,6 +83,9 @@ $(document).ready(function()
                   document.getElementById("email").value = "";
                   document.getElementById("text").value = "";
                   document.getElementById("captcha").value = "";
+                  document.getElementById("captcha").value = "";
+                  $('#captcha_img').attr('src', 'PHP/captcha.php?' + $.now());
+
                 }
               });
             });

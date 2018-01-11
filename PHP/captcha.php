@@ -17,5 +17,6 @@
 	imagettftext ($image, 30, 0, 10, 40, $color, $dir."verdana.ttf", $_SESSION['rand_code']);
 
 	header("Content-type: image/png");
+	header ("Cache-Control: no-cache, must-revalidate");
 	imagepng($image);
 ?>

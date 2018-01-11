@@ -4,7 +4,7 @@
 ?>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" http-equiv="Cache-Control" content="no-cache">
     <script src="libs/jquery_datatable/jquery_datatable_js.js"></script>
     <link rel="stylesheet" href="libs/normalize_css/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
@@ -50,7 +50,7 @@
                     <span>Captcha:</span>
                   </td>
                   <td class="form_basis-table_row-input-cell" align="center">
-                    <img src="PHP/captcha.php" class="captcha_img">
+                    <img src="PHP/captcha.php" class="captcha_img" id="captcha_img">
                   </td>
                 </tr>
 
@@ -65,7 +65,7 @@
                 <!--ROW SUBMIT -->
                 <tr class="form_basis-table_row">
                   <td class="form_basis-table_row-input-cell" colspan="2">
-                    <input id='submit' type='submit' value="send message"/>
+                    <input id='submit' type='submit' value='send message'/>
 
                   </td>
                   <td></td>

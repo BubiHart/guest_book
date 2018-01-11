@@ -22,8 +22,8 @@
 
 	/* Database connection information */
 	$gaSql['user']       = "user";
-	$gaSql['password']   = "LK9HZNw3mX8dQPmZ";
-	$gaSql['db']         = "test";
+	$gaSql['password']   = "BodSmxbmRo8rl3bi";
+	$gaSql['db']         = "guest_book";
 	$gaSql['server']     = "localhost";
 
 

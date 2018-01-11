@@ -5,7 +5,7 @@
   <html>
     <head>
 
-      <meta charset="utf-8">
+      <meta charset="utf-8" http-equiv="Cache-Control" content="no-cache">
       <title>Site title</title>
       <link rel="stylesheet" href="libs/normalize_css/normalize.css">
       <link rel="stylesheet" href="CSS/style.css">
@@ -31,7 +31,7 @@
           </div>
           <nav>
             <ul class="header-wrapper_main-navigation">
-              
+
               <li>
                 <a href="#" id="home_link">
                   Home

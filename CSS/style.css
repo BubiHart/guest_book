@@ -75,14 +75,14 @@ header
 {
   color: #000;
   margin: auto;
-  padding: 0 15px;
+  padding: 21px 15px;
 }
 
 main
 {
   width: 100%;
   height: auto;
-  min-height: 620px;
+  min-height: calc(100vh - 122px);
 }
 
 .main-wrapper
@@ -91,6 +91,8 @@ main
   width: 990px;
   margin: 0 auto;
   height: 100%;
+  background-color: #7AE969;
+  /*background-color: #A0F06C;*/
 }
 
 .main-wrapper-content
@@ -151,6 +153,17 @@ footer
 {
   margin: auto;
   color: #000;
+}
+
+input[type="submit"]
+{
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #269926;
+  margin-left: 50px;
+  border: none;
 }
 
 #main_table_wrapper
@@ -222,11 +235,16 @@ footer
 
 input[type="text"],
 input[type="email"],
-input[type="submit"],
 textarea[type="text"]
 {
   border: 1px solid #008500;
   background-color: #C5FDB5;
+}
+
+textarea[type="text"]
+{
+  min-width: 600px;
+  min-height: 400px;
 }
 
 
