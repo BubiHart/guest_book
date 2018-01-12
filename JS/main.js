@@ -1,12 +1,16 @@
 $(document).ready(function()
 {
+        //JQUERY VALIDATION
         $("#form").validate();
+        //GUEST BOOK LOAD ON CLICK
         $('#guest_book_link').click(function()
         {
 
           $("#content").load("pages/guest_book.php #load_table", function()
           {
+            //FANCYBOX INITIALIZATION
             $(".modalbox").fancybox();
+            //JQUERY DATATABLE INITIALIZATION
             $('#main_table').dataTable
             ({
               "bProcessing": true,
@@ -14,10 +18,13 @@ $(document).ready(function()
               "bRetrieve": true,
               "sAjaxSource": "PHP/jquery_datatables_server_connect.php"
             });
+
+            //CAPTCHA REFRESH ON CLICK
             $("#captcha_img").on("click", function()
             {
               $('#captcha_img').attr('src', 'PHP/captcha.php?' + $.now());
             });
+
             $("#submit").on("click", function()
             {
               //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM
@@ -59,6 +66,8 @@ $(document).ready(function()
                 }
               }).done(function(data)
               {
+                //RELOAD JQUERY DATATABLE
+
                 $('#main_table').DataTable().ajax.reload();
 
                 //UNBLOCK "SUBMIT" BUTTON
@@ -69,6 +78,7 @@ $(document).ready(function()
                 if (data == 0)
                 {
                   alert('captcha incorrect');
+                  //IF CAPTCHA WRONG REFRESH
                   $('#captcha_img').attr('src', 'PHP/captcha.php?' + $.now());
                 }
 
@@ -76,8 +86,11 @@ $(document).ready(function()
                 {
                   alert('Email incorrect');
                 }
+
                 if (data == 1)
                 {
+                  //IF SUCCESSFUL ADD MESSAGE CLOSE FORM, CLEAR INPUT'S AND REFRESH CAPTCHA
+
                   $.fancybox.close();
                   document.getElementById("name").value = "";
                   document.getElementById("email").value = "";
@@ -92,6 +105,7 @@ $(document).ready(function()
           });
         });
 
+        //HOME LOAD ON CLICK
         $('#home_link').click(function()
         {
           $.ajax
@@ -107,6 +121,7 @@ $(document).ready(function()
           return false;
         });
 
+        //BLOG LOAD ON CLICK
         $('#blog_link').click(function()
         {
           $.ajax
@@ -122,6 +137,7 @@ $(document).ready(function()
           return false;
         });
 
+        //CONTACT LOAD ON CLICK
         $('#contact_link').click(function()
         {
           $.ajax
@@ -136,6 +152,4 @@ $(document).ready(function()
           });
           return false;
         });
-
-
       });

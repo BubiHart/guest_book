@@ -3,7 +3,7 @@
   require_once("database_connect.php");
   try
   {
-    //CHECKING IF POST DATA IS GIVEN
+    //CHECKING CAPTCHA
     session_start();
     if($_POST['captcha'] != $_SESSION['rand_code'])
     {
@@ -14,6 +14,7 @@
     {
       echo 1;
     }
+    //CHECKING IF POST DATA IS GIVEN
     if(!empty($_POST))
     {
 
