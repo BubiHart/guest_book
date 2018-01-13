@@ -44,13 +44,13 @@
                   </td>
                   <td class="form_basis-table_row-input-cell" >
                     <!--MESSAGE TEXTAREA -->
-                    <textarea rows='5' id='text' type='text' maxlength="255" required></textarea>
+                    <textarea rows='5' id='text' type='text' maxlength="500" required></textarea>
                   </td>
                 </tr>
                 <!--ROW CAPTCHA -->
                 <tr class="form_basis-table_row">
                   <td class="form_basis-table_row-name-cell top">
-                    <span>Captcha:</span>
+
                   </td>
                   <td class="form_basis-table_row-input-cell" align="center">
                     <!--CAPTCHA IMG -->
@@ -60,7 +60,7 @@
 
                 <tr class="form_basis-table_row">
                   <td class="form_basis-table_row-name-cell">
-
+                    <span class="captcha_cell">Captcha:</span>
                   </td>
                   <td class="form_basis-table_row-input-cell">
                     <!--CAPTCHA INPUT -->
@@ -69,7 +69,7 @@
                 </tr>
                 <!--ROW SUBMIT -->
                 <tr class="form_basis-table_row">
-                  <td class="form_basis-table_row-input-cell" colspan="2">
+                  <td class="form_basis-table_row-input-cell" colspan="2" id="row_submit">
                     <!--SUBMIT INPUT -->
                     <input id='submit' type='submit' value='send message'/>
                   </td>

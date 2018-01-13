@@ -134,10 +134,8 @@ footer
   display: flex;
   width: auto;
   height: auto;
-  min-width: 35px;
-  min-height: 35px;
-  padding: 5px;
-  border-radius: 15px;
+  min-width: 130px;
+  min-height: 45px;
   background-color: #269926;
   margin: 10px auto 0 auto;
 }
@@ -186,7 +184,8 @@ footer
 
 .form_basis-table_row-input-cell
 {
-  text-align: center;
+
+  text-align: left;
 }
 
 .form_basis-table_row-input-cell input
@@ -202,12 +201,12 @@ footer
 
 input[type="submit"]
 {
-  width: 35px;
-  height: 35px;
-  padding: 5px;
-  border-radius: 15px;
+  min-width: 130px;
+  min-height: 45px;
+  width: auto;
+  height: auto;
   background-color: #269926;
-  margin-left: 50px;
+  margin: 0 auto;
   border: none;
 }
 
@@ -225,17 +224,27 @@ textarea[type="text"]
   background-color: #C5FDB5;
 }
 
+.captcha_cell
+{
+  margin-right: 10px;
+}
+
 textarea[type="text"]
 {
   min-width: 600px;
-  min-height: 400px;
+  min-height: 200px;
 }
 
 #submit
 {
+
   margin-top: 25px;
-  width: auto;
-  height: auto;
+}
+
+#row_submit
+{
+  text-align: center;
+  margin-left: 25px;
 }
 
 .captcha_img
