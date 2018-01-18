@@ -12,6 +12,7 @@
 
   </head>
   <body>
+    
     <div id="load_table">
 <!-----------------------------------------FANCYBOX FORM------------------------------------------------------------------>
       <div id="form" class="form">
@@ -64,7 +65,7 @@
                   </td>
                   <td class="form_basis-table_row-input-cell">
                     <!--CAPTCHA INPUT -->
-                    <input type="text" id="captcha" name="captcha" maxlength="10" required/>
+                    <input type="text" id="captcha" name="captcha" required/>
                   </td>
                 </tr>
                 <!--ROW SUBMIT -->
