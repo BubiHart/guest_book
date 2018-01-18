@@ -1,7 +1,7 @@
 <?php
   // MAKING CONNECTION WITH DATABASE
 
-  require_once 'test.php';
+  require_once 'db_classes.php';
   $con = new DB_con;
   try
   {

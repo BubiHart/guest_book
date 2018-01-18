@@ -19,12 +19,6 @@ $(document).ready(function()
               "sAjaxSource": "PHP/jquery_datatables_server_connect.php"
             });
 
-            //CAPTCHA REFRESH ON CLICK
-            $("#captcha_img").on("click", function()
-            {
-              $('#captcha_img').attr('src', 'PHP/captcha.php?' + $.now());
-            });
-
             $("#submit").on("click", function()
             {
               //CHECKING CORRECT INFORMATION FROM INPUT'S IN FORM

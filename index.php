@@ -1,5 +1,6 @@
 <?php
-  require_once 'PHP/database_connect.php';
+  require_once 'PHP/db_classes.php';
+  $con = new DB_con;
 ?>
 <html>
 

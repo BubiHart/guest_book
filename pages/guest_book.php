@@ -1,5 +1,6 @@
 <?php
-  require_once '../PHP/database_connect.php';
+  require_once '../PHP/db_classes.php';
+  $con = new DB_con;
 ?>
 <html>
   <head>
@@ -12,7 +13,7 @@
 
   </head>
   <body>
-    
+
     <div id="load_table">
 <!-----------------------------------------FANCYBOX FORM------------------------------------------------------------------>
       <div id="form" class="form">
