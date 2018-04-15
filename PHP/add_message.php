@@ -1,18 +1,22 @@
 <?php
-  error_reporting(0);
   // MAKING CONNECTION WITH DATABASE
-  require_once("database_connect.php");
+
+  require_once 'db_classes.php';
+  $con = new DB_con;
   try
   {
-    //CHECKING IF POST DATA IS GIVEN
+    //CHECKING CAPTCHA
     session_start();
     if($_POST['captcha'] != $_SESSION['rand_code'])
     {
-      echo "<div>".
-           "<span>captcha incorrect</span>".
-           "</div>";
+      echo 0;
       return false;
     }
+    if($_POST['captcha'] == $_SESSION['rand_code'])
+    {
+      echo 1;
+    }
+    //CHECKING IF POST DATA IS GIVEN
     if(!empty($_POST))
     {
 
@@ -28,8 +32,10 @@
       }
       if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
       }
-      else {
+      else
+      {
         $error[] = "email isn't valid";
+        echo 2;
       }
 
 
@@ -37,16 +43,11 @@
 
       if(empty($error))
       {
-        $query = "INSERT INTO messages VALUES ( NULL, :name, :text, :email, NOW(), 1)";
-        $usr = $pdo->prepare($query);
-        $usr->execute
-        (
-          [
-          'name' => $_POST['name'],
-          'email' => $_POST['email'],
-          'text' => $_POST['text'],
-        ]
-        );
+        $name = $_POST['name'];
+        $text = $_POST['text'];
+        $email = $_POST['email'];
+
+        $con->insert($name,$text,$email);
       }
     }
 

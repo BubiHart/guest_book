@@ -1,83 +1,79 @@
 <?php
-  require_once 'database_connect.php';
+  require_once 'PHP/db_classes.php';
+  $con = new DB_con;
 ?>
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Guest Book</title>
-      <script type="text/javascript" src="jquery.js" ></script>
-      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
-      <script src="main.js"></script>
+<html>
 
-    </head>
+<head>
 
-    <body>
-      <a href="#form" rel="nofollow" class="modalbox">add comment</a>
-      <div id="form">
-        <div class="info">
-          <?php
-          require_once 'add_message.php';
-          ?>
-        </div>
-        <p>
-          <span class='title'>Name:</span>
-          <span class='field'>
-            <input id='name' type='text' required/>
+  <meta charset="utf-8" http-equiv="Cache-Control" content="no-cache">
+  <title>Site title</title>
+  <link rel="stylesheet" href="libs/normalize_css/normalize.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="libs/jquery_datatable/jquery_datatable_css.css">
+  <link rel="stylesheet" href="libs/fancybox/fancybox_css.css">
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="libs/fancybox/fancybox_js.js"></script>
+  <script src="libs/jquery_validation/jquery_validate_js.js"></script>
+  <script src="libs/jquery_validation/jquery_validate_additional-methods_js.js"></script>
+  <script src="libs/jquery_datatable/jquery_datable_js.js"></script>
+  <script src="JS/main.js"></script>
+
+</head>
+
+<body>
+<!-----------------------------------------HEADER------------------------------------------------------------------>
+  <header>
+    <header class="header-wrapper">
+      <div class="header-wrapper-logo">
+        <span>
+            LOGO
           </span>
-        </p>
-        <p>
-          <span class='title'>E-mail:</span>
-          <span class='field'>
-            <input id='email' type='email' required/>
-          </span>
-        </p>
-        <p>
-          <span class='title'>Text:</span>
-          <span class='field'>
-            <textarea rows='5' id='text' type='text' required></textarea>
-          </span>
-        </p>
-            <p>
-              <span class='field'>
-                <img src="captcha.php">
-                <input type="text" id="captcha" name="captcha" required/>
-              </span>
-            </p>
-        <p>
-          <span class='title'>&nbsp;</span>
-          <span class='field'>
-            <input id='submit' type='submit' value="send message"/>
-          </span>
-        </p>
       </div>
+<!-------------------------SITE NAVIGATION --------------------------------------------------------->
+      <nav>
+        <ul class="header-wrapper_main-navigation">
 
-      <table id="main_table" class="display" width="100%" data-order='[[ 2, "desc" ]]'data-page-length='25' cellspacing="0">
-        <thead>
-          <tr>
-            <th>name</th>
-            <th>email</th>
-            <th>date</th>
-            <th>text</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-                  <td><?php{$messages['name']}?></td>
-                  <td><?php{$messages['email']}?></td>
-                  <td><?php{$messages['date']}?></td>
-                  <td><?php{$messages['text']}?></td>
-                  </tr>
-        </tbody>
-        </table>
+          <li>
+            <a href="#" id="home_link">
+                Home
+              </a>
+          </li>
+          <li>
+            <a href="#" id="blog_link">
+                Blog
+              </a>
+          </li>
+          <li>
+            <a href="#" class="guest_book" id="guest_book_link">
+                Guest Book
+              </a>
+          </li>
+          <li>
+            <a href="#" id="contact_link">
+                Contact us
+              </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </header>
+<!-----------------------------------------MAIN------------------------------------------------------------------>
+  <main>
+    <main class="main-wrapper">
+      <div id="content" class="main-wrapper-content">
+        HOME
+      </div>
+    </main>
+  </main>
+<!-----------------------------------------FOOTER------------------------------------------------------------------>
+  <footer>
+    <footer class="footer-wrapper">
+      <span>
+          footer
+        </span>
+    </footer>
+  </footer>
 
-    </body>
-
-  </html>
-  <?
-?>
+</body>
+</html>
